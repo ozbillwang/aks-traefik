@@ -1,0 +1,4 @@
+
+try out the app, open the url:
+
+kubectl -n {{ .Release.Namespace }} get ing bikesharingweb -o jsonpath='{.spec.rules[0].host}{"\n"}'
