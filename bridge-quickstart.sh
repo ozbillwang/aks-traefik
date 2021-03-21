@@ -61,9 +61,3 @@ helm upgrade --install bikesharingapp "$CHARTDIR" \
    --namespace $BIKENS \
    --timeout 9m \
    --atomic
-
-echo ""
-echo "To try out the app, open the url:"
-kubectl -n $BIKENS get ing bikesharingweb -o jsonpath='{.spec.rules[0].host}'
-echo ""
-
